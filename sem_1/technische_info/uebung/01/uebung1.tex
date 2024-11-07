@@ -1,0 +1,149 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{xypic}
+
+\begin{document}
+\section{}
+\subsection{}
+\begin{tabular}{c|c|c}
+    Buchstabe&Kodierung&``$k_i/r$''\\
+    L&000&$\frac{3}{13}$\\
+    E&001&$\frac{1}{13}$\\
+    O&010&$\frac{2}{13}$\\
+     &011&$\frac{2}{13}$\\
+    Ä&100&$\frac{1}{13}$\\
+    S&101&$\frac{3}{13}$\\
+    T&110&$\frac{1}{13}$
+\end{tabular}
+\subsection{}
+\begin{align*}
+    I &= -\sum_{i=1}^n p_i \log p_i\\
+    &= -\sum_{i=1}^7 p_i \log p_i\\
+    &= -(\frac{1}{7} \cdot \log\frac{1}{7}) \cdot 7 = -\log\frac{1}{7}
+    \approx 2.81
+\end{align*}
+\subsection{}
+\begin{align*}
+    I &= -\sum_{i=1}^n p_i \log p_i\\
+    &= -(\frac{3}{13}\cdot\log\frac{3}{13}
+    +\frac{1}{13}\cdot\log\frac{1}{13}
+    +\frac{2}{13}\cdot\log\frac{2}{13}
+    +\frac{2}{13}\cdot\log\frac{2}{13}\\
+    &+\frac{1}{13}\cdot\log\frac{1}{13}
+    +\frac{3}{13}\cdot\log\frac{3}{13}
+    +\frac{1}{13}\cdot\log\frac{1}{13})
+    \approx 2.06
+\end{align*}
+\subsection{}
+Der Informationsgehalt ist um etwa $0.75$ verringert.
+\subsection{}
+\xymatrix{
+    &&&&\ar[dl]_0\ar[dd]_113\\
+    &&&\ar[d]_0\ar[ddll]_15\\
+    &&&\ar[ddl]_0\ar[dd]_13&\ar[d]_0\ar[ddrr]_18\\
+    &\ar[dl]_0\ar[d]_12&&&\ar[dr]_0\ar[d]_15\\
+    E_1&A_1&T_1&O_2&``\ ''_2&L_3&S_3
+}
+\subsection{}
+\begin{tabular}{c|c}
+    Buchstabe&Kodierung\\
+    S&11\\
+    L&100\\
+    &101\\
+    O&001\\
+    T&000\\
+    A&011\\
+    E&010\\
+\end{tabular}
+\subsection{}
+$N = n_S+n_L+n_{}+n_O+n_T+n_A+n_E = 3\cdot 2+ 3\cdot 3+2\cdot 3+3+3+3 = 30$
+\subsection{}
+$b = r\cdot I \approx 13 \cdot 2.06 = 26.78$
+\subsection{}
+Der Huffman-Kode weicht um etwa $12\%$ ab.
+\subsection{}
+Der Huffman-Kode braucht $\frac{30}{13}\approx 2.31$ Zeichen,
+dies weicht um etwa $12\%$ vom
+Informationsgehalt $I\approx 2.06$ ab.
+\section{}
+\subsection{}
+\begin{tabular}{c|c|c|c|c|c|c|c}
+    a&b&c&$\neg a \lor b$&$(\neg a \lor b) \land \neg c)$&$(a\lor c)$&$b \land (a \lor c)$&$f(a,b,c)$\\
+    0&0&0&1&1&0&0&1\\
+    0&0&1&1&0&1&0&0\\
+    0&1&0&1&1&0&0&1\\
+    0&1&1&1&0&1&1&1\\
+    1&0&0&0&0&1&0&0\\
+    1&0&1&0&0&1&0&0\\
+    1&1&0&1&1&1&1&1\\
+    1&1&1&1&0&1&1&1\\
+\end{tabular}
+\subsection{}
+$(\neg a\land\neg b\land\neg c)\lor (\neg a\land\neg b\land\neg c)
+\lor(\neg a\land b\land c)\lor(a\land b\land\neg c)
+\lor(a\land b\land c)=m_0\lor m_2\lor m_3\lor m_6\lor m_7=
+\sum m(0,2,3,6,7)$
+\subsection{}
+$\neg y = \sum m(1,4,5)$
+\subsection{}
+$\neg y = \prod M(0,2,3,6,7)$
+\subsection{}
+$y = \prod M(1,4,5)$
+\subsection{}
+?
+\section{}
+\subsection{}
+\begin{equation*}
+    f_{x_1=0}=f(0,x_2,x_3)=\underbrace{[(x_2\lor x_3)\land 0]}_0
+    \lor\underbrace{[(x_2\land(x_2\lor x_3)\land x_3)\land 0]}_0
+    =0
+\end{equation*}
+
+\begin{equation*}
+    f_{x_1=1}=f(0,x_2,x_3)=\underbrace{[(x_2\lor x_3)\land 1]}_{x_2\lor x_3}
+    \lor\underbrace{[(x_2\land(x_2\lor x_3)\land x_3)\land 1]}_{x_2\land(x_2\lor x_3)\land x_3}
+    =(x_2\lor x_3)\lor [x_2\land(x_2\lor x_3)\land x_3]
+\end{equation*}
+\subsection{}
+\begin{equation*}
+    f_{x_1=1,x_2=0}=f(0,0,x_3)=\underbrace{(0\lor x_3)}_{x_3}
+    \lor\underbrace{[0\land(0\lor x_3)\land x_3]}_{0}
+    =x_3
+\end{equation*}
+\begin{equation*}
+    f_{x_1=1,x_2=1}=f(0,1,x_3)=\underbrace{(1\lor x_3)}_{1}
+    \lor\underbrace{[1\land(1\lor x_3)\land x_3]}_{x_3}
+    =x_3
+\end{equation*}
+\subsection{}
+\begin{equation*}
+    f_{x_1=1,x_2=1,x_3=0}=f(0,1,0)=0
+\end{equation*}
+\begin{equation*}
+    f_{x_1=1,x_2=1,x_3=1}=f(0,1,1)=1
+\end{equation*}
+\subsection{}
+\begin{equation*}
+    y=
+    \underbrace{(x_1\land\neg x_2\land x_3)}_{101}\lor
+    \underbrace{(x_1\land x_2\land x_3)}_{111}\lor
+    \underbrace{(x_1\land x_2\land\neg x_3)}_{110}
+    =\sum m(5,6,7)
+\end{equation*}
+\subsection{}
+\xymatrix{
+    &&&&&&x_1\ar[dllll]_0\ar[drrrr]_1\\
+    &&x_2\ar[dl]_0\ar[drr]_1&&&&&&&&x_2\ar[dll]_0\ar[dr]_1\\
+    &x_3\ar[dl]_0\ar[dr]_1&&&x_3\ar[dl]_0\ar[dr]_1&&&&x_3\ar[dl]_0\ar[dr]_1&&&x_3\ar[dl]_0\ar[dr]_1\\
+    0&&0&0&&0
+    &&0&&1&1&&1
+}
+\subsection{}
+\xymatrix{
+    x_1\ar[dr]_1\ar[dd]_0\\
+    &x_2\ar[d]_0\ar[dr]_1\\
+    0&x_3\ar[l]_0\ar[r]_1&1
+}
+\end{document}

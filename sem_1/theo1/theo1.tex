@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Theo1}
+\author{Nick Daiber}
+
+\begin{document}
+
+\maketitle
+\section{16.10}
+$A\times B = \{(a,b) | a\in A, b\in B\}$\\
+$(A\times B) \times C = A \times (B \times C)$\\
+$\mathbb N = \mathbb N \cup \{0\}$\\
+$2^A = P(A)$
+
+Nichttriviale Teilmenge: $A\subset B \land A \neq B \land A \neg \emptyset$\\
+
+\section{Formale Sprachen (17.10)}
+\begin{itemize}
+	\item{Alphabet $\Sigma$}
+	\item{$\Sigma^*$ alle Wörter}
+	\item{$\varepsilon$ leeres wort}
+	\item{$\Sigma^k$ Wörter der Länge k (als n-Tupel)}
+	\item{$|w|$ die Länge des Wortes}
+	\item{$w^n = w\cdot w \cdot \hdots \cdot w$}
+\end{itemize}
+Monoid ist eine Menge mit einer assoziativen Verknüpfung und einem Neutralen Element
+Hier: Verknüpfung = Konkatenation
+
+$\Sigma^*$ ist abzählbar unendlich, die Menge aller Sprachen ist $P(\Sigma^*)$ und ebenfalls
+abzählbar unendlich
+
+\subsection{Grammatiken}
+\begin{itemize}
+	\item {$G=(V,\Sigma,P,S)$}
+	\item{$V$ Nichtterminale}
+	\item{$\Sigma$ Terminale}
+	\item{$P$ Produktionsregeln}
+	\item{$S\in V$ Startsymbol}
+	\item{Typ 0: Beliebig}
+	\item{Typ 1: $|u| < |v|$, Wort wird Länger}
+	\item{Typ 2: $(u,v)$ mit $u \in V$}
+	\item{Typ 3: $(u,v)$, $v = (\Sigma, v_2 \in V)$ oder $v \in \Sigma$, (max 1 nichtterminal)}
+\end{itemize}
+\end{document}

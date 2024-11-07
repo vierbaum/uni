@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage{amsmath}
+\title{Theo 3}
+\author{Nick Daiber}
+
+\begin{document}
+\maketitle
+\section{Sortieren}
+Problem: Gegeben eine $n-$elementige Teilmenge $S = \{S_1, \hdots, S_n\}$ aus geordneten
+Universum $U$.\\
+Gesucht: Permutation $\pi: \{1, \hdots, n\} \rightarrow \{1, \hdots, n\}$, sodass gilt
+$S_{\pi(1)}<S_{\pi(2)}<S_{\pi(3)}<$
+\subsection{Ordnung}
+\begin{itemize}
+	\item{Buchstaben nach Position im Alphabet}
+	\item{$w_1<w_2 \Leftrightarrow w_1 = s_1 x t_1, w_2=s_1 y t_2$\\
+		mit $s_1 \in {a, \hdots, Z}^*$}
+\end{itemize}
+
+Sortierverfahren berechnet $\pi$
+Aufwand:
+\begin{itemize}
+	\item{Zeit}
+	\item{Platz}
+	\item{Anzahl der Zufallsbits}
+	\item{I/O operationen}
+\end{itemize}
+
+Analyse eines Algorithmus für beliebige Probleminstanzen oder mit speziellen Eigenschaften.\\
+Wir betrachten nur beliebige Probleminstanzen.
+
+\subsection{Bubble sort}
+Eingabe: Array $A[1\hdots n]$(Zahlen)\\
+Ausgabe: $A[]$ so sortiert, dass $\forall 1 \leq i \leq n-1 : A[i] \leq A[i+1]$
+%TODO Programm
+\subsubsection{ Sortiert Bubblesort A?}
+\begin{itemize}
+	\item{Alg verliert keine Zahl (weiß nicht, ob das wirklich bewiesen ist)}
+\end{itemize}
+Lemma: Sei i beliebig, betrachte $A[1, i]$ zu Zeitpunkt $1, 2$ 
+zu 2 gilt $A[i] = max(g\in{1,\hdots,i}) A(g)$
+$\Rightarrow$ das größte Element steht in $A[i]$ und kein Element geht verloren
+
+Beweis: Idee - Sei $h$ der index in ${1,\hdots,i}$ mit $A[h] = max$
+sobald $j=h$ wird $A[h]$ mit $A[h+1]$ getauscht, etc
+
+\subsection{Laufzeit}
+Uns interessiert die Laufzeit von BS
+\begin{itemize}
+	\item{Implementiere Alg und messen\\
+		Problem: Andere Hardware, etc.}
+	\item{Anzahl der Instruktionen zählen (im Code)}
+	\item{Anzahl Vergleiche Zählen}
+\end{itemize}
+Behauptung: Abgesehen von Konstanten Faktor weicht das nicht ab vom Zählen aller 
+ausgeführten Instruktionen
+
+Annahme: Algorithmen haben konstante Größe
+
+Lemma: Wenn eine Algorithmenbeschreibung c Zeilen hat, wird bei erfolgreichem Ablauf mindestens alle c 
+Zeilen ein Vergleich ausgeführt
+
+Vergleiche = n + $\sum_{l=2}^n l + \sum_{l=2}^{n-1} l =  n^2+n-2$
+
+Bubblesort macht $n^2+n-1$ vgl.
+
+Annahme: Rechner macht $10^9$ instruktionen pro sekunde
+\end{document}

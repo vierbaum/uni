@@ -1,0 +1,112 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+\begin{document}
+\section{}
+\begin{itemize}
+    \item{$\mathbb N$ sind die Natürlichen Zahlen}
+    \item{$\mathbb Z$ sind die Ganzen Zahlen}
+    \item{$\in$ beschreibt die zugehörigkeit zu einer Menge}
+    \item{$\varepsilon$ leeres Wort}
+    \item{$\Sigma$ Alphabet}
+    \item{$\Sigma^*$ Menge aller Wörter}
+    \item{$\emptyset$ leere Menge}
+    \item{$\exists$ Existenzquantor}
+\end{itemize}
+
+\section{}
+\begin{enumerate}
+    \item{$A \subsetneq B$: Aussage}
+    \item{$A \setminus B$: Menge}
+    \item{$A \cap B$: Menge}
+    \item{$A \subseteq B$: Aussage}
+    \item{$A \subset B$: Aussage}
+    \item{$A \nsubseteq B$: Aussage}
+    \item{$A \cup B$: Aussage}
+    \item{$\mathbb P(A)$: Menge}
+    \item{$2^A$: Menge}
+\end{enumerate}
+
+\section{}
+\subsection{}
+$\Sigma^n = \{(w_1, w_2, \hdots, w_n) | w_1, w_2, \hdots, w_n \in \Sigma\}$
+
+\subsection{}
+$\Sigma^{\leq n} = \underset{k \leq n}{\bigcup}\Sigma^n$
+\subsection{}
+\begin{align*}
+    \Sigma^k\Sigma^l&=\{uv | u\in\Sigma^k,v\in\Sigma^l\}\\
+    &=\{uv|u\in\{x\in\Sigma^*|\ |x|\leq k\},v\in\{y\in\Sigma^*|\ |y|\leq l\}\}\\
+    &=\{\sigma\in\Sigma^*|\ |\sigma|\leq k+l\}\\
+    &=\Sigma^k\Sigma^l
+\end{align*}
+\subsection{}
+\begin{align*}
+    \Sigma^k\Sigma^l &=\{\sigma\in\Sigma^*|\ |\sigma|\leq k+l\}\\
+    &=\{\sigma\in\Sigma^*|\ |\sigma|\leq l+k\}\\
+    &=\Sigma^l\Sigma^k
+\end{align*}
+\subsection{}
+\begin{itemize}
+    \item{$L=\{0,1\}$}
+    \item{$K=\{2,3\}$}
+\end{itemize}
+\section{}
+\subsection{}
+$\Sigma = \{a,b\}$\\
+$V=\{S,A,B\}$\\
+$P=\{S\rightarrow AB, AB\rightarrow AABB,
+A \rightarrow (a,\varepsilon), B \rightarrow (b, \varepsilon)\}$
+\subsection{}
+$\Sigma = \{a,b\}$\\
+$V=\{S,A\}$\\
+$P=\{S\rightarrow A, A\rightarrow (bA, b)\}$
+\subsection{}
+\subsubsection{}
+Nein, Sei $L^{'}$ eine Sprache vom Typ 2, so kann diese von einer Grammatik $G^{'}$ 
+vom Typ 2 erzeugt werden. Da $G^{'}$ vom Typ 2 ist, ist $G^{'}$ ebenfalls vom Typ 1 und 
+$L(G^{'})$ ist auch vom Typ 1.
+\subsubsection{}
+Ja
+\subsubsection{}
+Nein, Sei $G=(V, \Sigma, \{S\rightarrow AB, \hdots\})$ ist vom Typ 0, aber nicht typ 3
+\subsection{}
+Nein, Sei $L((\{S, A\}, \{a\}, \{S\rightarrow A, A\rightarrow (aA, \varepsilon)\}, S))$
+\section{}
+\subsection{}
+Sei $L^* = \{a, b\}$, dann ist $(L^*)* = \{\{a, b\}, \hdots\}$\\
+Anmerkung: $L^{\Omega(1)} = L^*$ usw, $\lim\limits_{n\rightarrow\infty}L^{\Omega(n)}$
+\subsection{}
+Nein, wieder Wörter aus Mengen bzw menge aus Wörtern
+\subsection{}
+Nein, wieder Wörter aus Mengen bzw menge aus Wörtern
+\subsection{}
+\begin{align*}
+    L(K \cap P) &= L\{w | w\in K\land w\in P\}\\
+    &= \{lv | l\in L, v\in\{w | w\in K\land w\in P\}\}\\
+    &= \{lv | l\in L, v\in K\land v\in P\}\}\\
+    &=\{lk | l\in L, k\in K\} \cap \{lp|l\in L, p\in P\}\\
+    &=LK \cap LP
+\end{align*}
+\subsection{}
+\begin{align*}
+    L(K \cup P) &= L\{w | w\in K\lor w\in P\}\\
+    &= \{lv | l\in L, v\in\{w | w\in K\lor w\in P\}\}\\
+    &= \{lv | l\in L, v\in K\lor v\in P\}\}\\
+    &=\{lk | l\in L, k\in K\} \cup \{lp|l\in L, p\in P\}\\
+    &=LK \cup LP
+\end{align*}
+
+\section{}
+\subsection{}
+Typ 2\\
+$\{(aa)^nbb^n\}$
+\subsection{}
+Typ 3\\
+$\{a,b\}^*$
+\subsection{}
+Typ 1\\
+$\{a+b+\}$
+\end{document}

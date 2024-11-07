@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\author{Nick Daiber}
+\title{Mathe 03}
+
+\begin{document}
+\maketitle
+\section*{2}
+\subsection*{a}
+\paragraph{Reflexivität}
+\begin{align*}
+    &a=(n,m)\\
+    &nm = nm\\
+    &\Leftrightarrow(n,m)\sim(n,m)\\
+    &\Leftrightarrow a\sim a
+\end{align*}
+\paragraph{Symmetrie}
+\begin{align*}
+    &a\sim b\\
+    &\Leftrightarrow(n,m)\sim(x,y)\\
+    &\Leftrightarrow ny=xm\\
+    &\Leftarrow mx=ny\\
+    &\Leftrightarrow(x,y)\sim(n,m)\\
+    &\Leftrightarrow b\sim a
+\end{align*}
+\paragraph{Transitivität\\}
+Sei $a\sim b\text{ und }b\sim c$\\
+dann gilt
+
+\begin{equation}
+    n_a m_b=n_b m_a\Leftrightarrow n_b=\frac{n_a m_b}{m_a}
+\end{equation}
+\begin{equation}
+    n_b m_c=n_c m_b
+\end{equation}
+\begin{align*}
+    &n_b m_c\overset{(1)}{=}\frac{n_a m_b m_c}{m_a}\overset{(2)}{=}n_c m_b\\
+    &\Leftrightarrow n_a m_c = n_c m_a\\
+    &\Leftrightarrow a\sim c\\\blacksquare
+\end{align*}
+\subsection*{b}
+Sei $a:=(n,m)\in \mathbb Z\times\mathbb N$ beliebig.
+Man nehme an, es existiert kein ungekürztes paar in $K(a, R)$\\
+Wähle $(x,y)\in K(a, R)$ beliebig, es gilt also
+\begin{align*}
+    &(n,m)\sim(x,y)\\
+    &\Leftrightarrow ny=xm \text{ da x,y nach Annahme nicht Teilerfremd}\\
+    &\Leftrightarrow n(ky')=(kx')m\\
+    &\Leftrightarrow k(ny')=k(x'm)\\
+    &\Leftrightarrow ny'=x'm\\
+    &\Leftrightarrow (n,m) \sim (x',y')
+\end{align*}
+Sind x', y' immernoch nicht Teilerfremd, so wiederhole man bis sie es sind.
+Da $a\sim(x',y')\in A$ ist $(x',y')\in K(a,R)$ ist ein Widerspruch zur
+Annahme $\blacksquare$
+\subsection*{c}
+Zunächst wird gezeigt, dass es zu jedem $a\in A$ ein $b\in B$ mit $a\sim b$ gibt.\\
+Sei $a\in A beliebig$ so ist $a$ entweder gekürzt und $a\sim a\in B$ oder
+$a:=(kn, km)$, mit $k = \text{ggT}(n,m)$.\\
+dann gilt $kn m = n km$ also $a\sim (n,m)\in B$.
+Als nächstes wird gezeigt, dass es genau ein $b\in B$ gibt mit $a\sim b$.
+Dafür wird angenommen, dass Elemente aus $B$ mit $a$ in relation stehen.\\
+Wähle $a\in A$ beliebig und $b:=(n,m), b':=(x,y)\in B$ mit $a\sim b$ und $a\sim b'$
+\begin{align*}
+    \Rightarrow b\sim b'\\
+    \Leftrightarrow nx = my\\
+    \Leftrightarrow n,x,m,y|nx
+\end{align*}
+Da $n,m$ und $x,y$ Teilerfremd sind, gilt $(n,m)=(x,y)$.
+Es gibt also nur ein $b\in B$, das mit $a$ in relation steht
+$\blacksquare$
+
+\end{document}

@@ -1,0 +1,105 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{circledsteps}
+
+\title{Übung 1}
+\author{Nick Daiber}
+
+\begin{document}
+    \maketitle
+    \section{}
+    Aufgabe 1. (V) Ein Mann ist in einem Keller gefangen. Nach einer
+    kurzen Suche findet er drei
+    Türen. Hinter einer der Türen ist ein Weg in die Freiheit.
+    Hinter den anderen zwei Türen ist
+    jedoch ein b¨oser Feuer speiender Drache. An jeder Tür hängt ein Zettel
+    mit einem Hinweis auf
+    ihren Inhalt. Mindestens einer der drei Hinweise ist wahr und
+    mindestens einer von ihnen ist falsch.
+    Die Hinweise lauten:
+    Tür führt in die Freiheit.
+    Tür 2: Es befindet sich ein Drache hinter dieser Tür.
+    Tür 3: Es befindet sich ein Drache hinter der Tür 2.
+    Welche Tür sollte der Mann öffnen, um frei zu kommen? Begründen Sie Ihre
+    Antwort.
+
+    Führe Tür 1 in die Freiheit, dann gilt $\Circled{1}$ wahr
+    und $\Circled{1} \Rightarrow \Circled{1} \land \Circled{2} \land \Circled{3}$\\
+    Führe Tür 2 in die Freiheit, dann gilt 
+    $\neg\Circled{1}\land \neg \Circled{2} \land \neg \Circled{3}$\\
+    Führe Tür 3 in die Freiheit, dann gilt $\neg\Circled{1}\land \Circled{2} \land \Circled{3}$\\
+    Da mindestens eine Aussage falsch und eine wahr sein muss, können fallen Tür 1,2 weg.
+
+    \section{}
+    A:= Anna hat die Prüfung bestanden.\\
+    B:= Britta hat die Prüfung bestanden.\\
+    C:= Carlo hat die Prüfung bestanden.\\
+    \subsection{}
+    $C\land\neg A\land \neg B$
+    \subsection{}
+    $\neg A \land B \land C$
+    \subsection{}
+    $(A \land \neg B \land \neg C) \lor (B \land \neg A \land \neg C) \lor
+    (C \land \neg A \land \neg B)$
+    \subsection{}
+    $A \lor B \lor C$
+    \subsection{}
+    $(A \land B) \lor (A \land C) \lor (B \land C)$
+    \subsection{}
+    $\neg (A \land B \land C)$
+    \subsection{}
+    $(A\land B \land \neg C) \lor (B \land C \land \neg A)
+    \lor (A \land C \land \neg B)$
+    \section{}
+    \subsection{}
+    \begin{align*}
+        (A\cup B)^c &= (\{z\in X | z \in A \lor z \in B\})^C\\
+        &= X \setminus \{z\in X | z \in A \lor z \in B\}\\
+        &=\{y \in X | y \notin \{z\in X | z \in A \lor z \in B\}\}\\
+        &=\{y \in X | y \notin A \land y \notin B\}\\
+        &=\{y \in X | y \in \{z \in X | z \notin A\} \land y \in \{z \in X | \notin B\}\}\\
+        &=\{y \in X | y \notin A\} \cap \{y \in X | y \notin B\}\\
+        &= A^c \cap B^c\\
+        \blacksquare
+    \end{align*}
+    \subsection{}
+    \begin{align*}
+        (A\cap B)^c &= X \setminus \{z \in X | z \in A \land z \in B\}\\
+        &= \{y \in X | y \notin \{z \in X | z \in A \land z \in B\}\}\\
+        &= \{y \in X | y \notin A \lor y \notin B\}\\
+        &= \{y \in X | y \in \{z \in X |\notin A\} \lor y \in \{z \in X | z \notin B\} \}\\
+        &= A^c \cap B^c
+    \end{align*}
+    \section{}
+    \subsection{}
+    $A = \mathbb{Z}\setminus \{7\}$\\
+    $B = \{-2, 2, -3, 3, -5, 5, -7, 7, -11, 11, -13, 13, -17, 17, -19, 19, -23, 23, -29, 29, -31, 31\}$\\
+    $C = (-35, 35)$\\
+    $Sei a^3:=x, b=0$, dann ist $a^3-b^3=x$
+    \subsection{}
+    $A\cap B = B\setminus \{7\}$\\
+    $A\cup B = \mathbb{Z}$\\
+    $A\cap B \cap C = B\setminus\{7\}$
+    \subsection{}
+    Sei $I:=[a;b]$ mit $a,b \in \mathbb{Z}, (a>7\lor b<7)\land b>a \Rightarrow [a;b] \subset A \land \emptyset \subset [a;b]$\\
+    Mit $c := \frac{b-a}{10}$ definieren wir $A_0 = \{a+ 0\cdot c, a + 1 \cdot c, a + 2\cdot c, \hdots, a + 10\cdot c\}$\\
+    Da es unendlich $a<7$ und $b > 7$ gibt, gibt es unendlich Teilmengen von A 
+    und unendlich Teilmengen von A mit genau 11 Elementen.
+    \subsection{}
+    \begin{enumerate}
+        \item{Ja, $\frac{12}{1-7}=-6\in\mathbb Z$}
+        \item{Nein, da 1 keine Primzahl ist}
+        \item{Ja, da $2,3 \in (-35, 35)$}
+        \item{Nein, da $B \subset C$}
+        \item{Nein, $C$ ist Überabzählbar unendlich}
+        \item{Nein, $A\setminus B$ ist Überabzählbar unendlich}
+        \item{Ja, $\emptyset \cup C = C$}
+        \item{Nein, $A \cap C = (-35, 35)\setminus \{7\}$}
+        \item{Nein, $B\cap C = B$}
+        \item{Nein, $A \cup C = \mathbb Z$}
+    \end{enumerate}
+
+
+
+\end{document}

@@ -1,0 +1,138 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+\begin{document}
+    \section{}
+    \subsection{}
+    Nach Annahme gilt
+    \begin{align*}
+        \limsup\limits_{n\rightarrow\infty}\frac{f(n)}{g(n)} =: A< \infty\\
+        \Leftrightarrow\lim\limits_{n\rightarrow\infty}\sup(\frac{f(n)}{g(n)}) < \infty\\
+        \limsup\limits_{n\rightarrow\infty}\frac{g(n)}{h(n)} =: B< \infty\\
+        \Leftrightarrow\lim\limits_{n\rightarrow\infty}\sup(\frac{f(g)}{g(h)}) < \infty\\
+    \end{align*}
+    Es gilt also
+    \begin{align*}
+        \Leftrightarrow\lim\limits_{n\rightarrow\infty}\sup(\frac{f(n)}{g(n)}) \cdot
+        \lim\limits_{n\rightarrow\infty}\sup(\frac{f(g)}{g(h)})\\
+        = \lim\limits_{n\rightarrow\infty}\sup(\frac{f(n)}{g(n)})\cdot\sup(\frac{g(n)}{h(n)}) = A \cdot B\\
+        \Leftrightarrow \lim\limits_{n\rightarrow\infty}\sup(\frac{f(n)}{g(n)}\cdot\frac{g(n)}{h(n)}) \leq A \cdot B\\
+        \Leftrightarrow \lim\limits_{n\rightarrow\infty}\sup(\frac{f(n)}{h(n)}) \leq A \cdot B < \infty\\
+        \Leftrightarrow \limsup\limits_{n\rightarrow\infty}\frac{f(n)}{h(n)} < \infty\\
+        f\in O(h) \blacksquare
+    \end{align*}
+    \subsection{}
+    Nach Annahme gilt
+    \begin{align*}
+        \limsup\limits_{n\rightarrow\infty}\frac{f_1(n)}{g_1(n)} < \infty\\
+        \Leftrightarrow\lim\limits_{n\rightarrow\infty}\sup(\frac{f_1(n)}{g_1(n)}) < \infty\\
+        \limsup\limits_{n\rightarrow\infty}\frac{f_2(n)}{g_2(n)} < \infty\\
+        \Leftrightarrow\lim\limits_{n\rightarrow\infty}\sup(\frac{f_2(n)}{g_2(n)}) < \infty\\
+    \end{align*}
+
+    \begin{align*}
+        \infty > f_1 \cdot f_2 &= \lim\limits_{n\rightarrow\infty}\sup(\frac{f_1}{g_1}) \cdot
+        \lim\limits_{n\rightarrow\infty}\sup(\frac{f_2}{g_2})\\
+        &\geq \lim\limits_{n\rightarrow\infty}\sup(\frac{f_1}{g_1}\cdot \frac{f_1}{g_2})\\
+        &=\limsup\limits_{n\rightarrow\infty}\frac{f_1\cdot f_2}{g_1 \cdot g_2} < \infty\\
+        &\Leftrightarrow f_1\cdot f_2\in O(g_1\cdot g_2) \blacksquare
+    \end{align*}
+
+    \newpage
+    \section{}
+    \subsection{}
+    \begin{align*}
+        &\limsup\limits_{n\rightarrow\infty}\frac{n^k}{a^n}\\
+        &=\limsup\limits_{n\rightarrow\infty}\frac{k\cdot n^{(n-1)}}{\ln(a)a^n}\\
+        \vdots\\
+        &=\limsup\limits_{n\rightarrow\infty}\frac{\frac{2(k-1)}{2}n^0}{\ln^k(a)a^n}\\
+        &=\limsup\limits_{n\rightarrow\infty}\frac{1}{a^n} =0\\
+        &\Rightarrow n^k\in o(a^n)
+    \end{align*}
+    \subsection{}
+    $\lim\limits_{n\rightarrow\infty}\frac{\log^rn}{n^l}=0$
+
+    \section{}
+    \subsection{}
+    \paragraph{Induktionsvorraussetzung}
+    \begin{equation*}
+        \sum_{i=1}^1 i = 1 = \frac{1(1+1)}{2}
+    \end{equation*}
+    \paragraph{Induktionsannahme}
+    \begin{equation*}
+        \sum_{i=1}^n i = \frac{n(n+1)}{2}
+    \end{equation*}
+    \paragraph{Induktionsschritt}
+    \begin{align*}
+        &\sum_{i=1}^{n+1} i\\
+        &=\sum_{i=1}^{n} i + n + 1\\
+        &=\frac{n(n+1)}{2} + n + 1\\
+        &=\frac{n(n+1)}{2} + \frac{2(n+1)}{2}\\
+        &=\frac{(n+1)((n+1)+1)}{2}\\
+    \end{align*}
+
+    \subsection{}
+    $n^{0.4}<\sqrt{n}<3n<n\log n<\sqrt{3}^n<2^n<n!$
+
+    \section{}
+    \subsection{f1}
+    \begin{equation*}
+        N=\sum_{i=1}^n\sum_{j=1}^n 1 = n^2
+    \end{equation*}
+
+    \subsection{f2}
+    \begin{equation*}
+        N=\sum_{i=1}^n\sum_{j=i}^n 1 = \frac{n(n+1)}{2} = \frac{n^2}{2}+\frac{n}{2}
+    \end{equation*}
+
+    \subsection{f3}
+    \begin{equation*}
+        N=\sum_{i=1}^n\sum_{j=1}^i 1 = \frac{n(n+1)}{2}
+    \end{equation*}
+
+    \subsection{f4}
+    \begin{equation*}
+        N=\sum_{i=1}^{1000n}\sum_{j=1}^{1000} 1 = 10^6n
+    \end{equation*}
+
+    \subsection{f5}
+    \begin{equation*}
+        N=\sum_{i=1}^{n-1}\sum_{i=1}^{n-2}\hdots=\prod_{i=1}^n i=(n-1)!
+    \end{equation*}
+
+    \subsection{f6}
+    \begin{equation*}
+        N=n(\log n+1)
+    \end{equation*}
+
+    \subsection{f7}
+    \begin{equation*}
+        N=2 \cdot n - 1
+    \end{equation*}
+
+    \subsection{f8}
+    \begin{equation*}
+        N=2 \cdot n - 1
+    \end{equation*}
+
+    \subsection{f9}
+    \begin{equation*}
+        N=\sum_1^{n}\sum_1^{n-1}\hdots = \prod_1^n i = n!
+    \end{equation*}
+
+    \subsection{f10}
+    \begin{equation*}
+        N=99999
+    \end{equation*}
+
+    \subsection{f11}
+    \begin{equation*}
+        N=\log n + 1
+    \end{equation*}
+    \subsection{f12}
+    \begin{equation*}
+        N = \frac{\log_4(n)}{2}
+    \end{equation*}
+\end{document}

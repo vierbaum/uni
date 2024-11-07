@@ -1,0 +1,45 @@
+\documentclass{article}
+\title{Theoretische Informatik III Übung 1}
+\author{Denise Rappold, Elias Allert, Nick Daiber}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+\begin{document}
+    \maketitle
+    \section{}
+    \subsection{}
+    Nach Annahme gilt
+    \begin{align*}
+        \limsup\limits_{n\rightarrow\infty}\frac{f(n)}{g(n)} =: A< \infty\\
+        \Leftrightarrow\lim\limits_{n\rightarrow\infty}\sup(\frac{f(n)}{g(n)}) < \infty\\
+        \limsup\limits_{n\rightarrow\infty}\frac{g(n)}{h(n)} =: B< \infty\\
+        \Leftrightarrow\lim\limits_{n\rightarrow\infty}\sup(\frac{f(g)}{g(h)}) < \infty\\
+    \end{align*}
+    Es gilt also
+    \begin{align*}
+        \Leftrightarrow\lim\limits_{n\rightarrow\infty}\sup(\frac{f(n)}{g(n)}) \cdot
+        \lim\limits_{n\rightarrow\infty}\sup(\frac{f(g)}{g(h)})\\
+        = \lim\limits_{n\rightarrow\infty}\sup(\frac{f(n)}{g(n)})\cdot\sup(\frac{g(n)}{h(n)}) = A \cdot B\\
+        \Leftrightarrow \lim\limits_{n\rightarrow\infty}\sup(\frac{f(n)}{g(n)}\cdot\frac{g(n)}{h(n)}) \leq A \cdot B\\
+        \Leftrightarrow \lim\limits_{n\rightarrow\infty}\sup(\frac{f(n)}{h(n)}) \leq A \cdot B < \infty\\
+        \Leftrightarrow \limsup\limits_{n\rightarrow\infty}\frac{f(n)}{h(n)} < \infty\\
+        f\in O(h) \blacksquare
+    \end{align*}
+    \subsection{}
+    Nach Annahme gilt
+    \begin{align*}
+        \limsup\limits_{n\rightarrow\infty}\frac{f_1(n)}{g_1(n)} < \infty\\
+        \Leftrightarrow\lim\limits_{n\rightarrow\infty}\sup(\frac{f_1(n)}{g_1(n)}) < \infty\\
+        \limsup\limits_{n\rightarrow\infty}\frac{f_2(n)}{g_2(n)} < \infty\\
+        \Leftrightarrow\lim\limits_{n\rightarrow\infty}\sup(\frac{f_2(n)}{g_2(n)}) < \infty\\
+    \end{align*}
+
+    \begin{align*}
+        \infty &> \lim\limits_{n\rightarrow\infty}\sup(\frac{f_1}{g_1}) \cdot
+        \lim\limits_{n\rightarrow\infty}\sup(\frac{f_2}{g_2})\\
+        &\geq \lim\limits_{n\rightarrow\infty}\sup(\frac{f_1}{g_1}\cdot \frac{f_2}{g_2})\\
+        &=\limsup\limits_{n\rightarrow\infty}\frac{f_1\cdot f_2}{g_1 \cdot g_2} < \infty\\
+        &\Leftrightarrow f_1\cdot f_2\in O(g_1\cdot g_2) \blacksquare
+    \end{align*}
+\end{document}

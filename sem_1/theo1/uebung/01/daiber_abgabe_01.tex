@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{xypic}
+\title{Theo 1 Abgabe 1}
+\author{Nick Daiber}
+
+\begin{document}
+    \maketitle
+    \section{}
+        $G_1 = 
+        (\{S\},
+        \{a, b\},
+        \{S\rightarrow\varepsilon|aSa|bSb\},
+        S)$\\
+        $G_2 = 
+        (\{S, A\},
+        \{a,b\},
+        \{S\rightarrow AbAbAbA,
+        A\rightarrow aA|\varepsilon\},
+        S)$\\
+        $G_3 = 
+        (\{E,Z,D\},
+        \{a, b\},
+        \{
+        E\rightarrow aZ|bZ,
+        Z\rightarrow aD|bD,
+        D\rightarrow \varepsilon|aE|bE\},
+        E)$\\
+    \section{}
+        \subsection{a}
+            \xymatrix{
+                &S\ar[dl]\ar[dr]\\
+                a&&A\ar[dl]\ar[dr]\\
+                &a&&A\ar[dr]\\
+                &&&&b
+            }
+        \subsection{b}
+            \xymatrix{
+                &S\ar[dl]\ar[dr]\\
+                a&&B\ar[dl]\ar[dr]\\
+                &a&&B\ar[dr]\\
+                &&&&b
+            }
+        \subsection{c}
+            $G= 
+            (\{A, B\},
+            \{a,b\},
+            \{
+            A\rightarrow aB|Bb,
+            B\rightarrow aB|bB|a|b\},
+            A)$\\
+
+\end{document}
