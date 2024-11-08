@@ -1,0 +1,67 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\author{Nick Daiber}
+\title{Mathe 04}
+
+\begin{document}
+\maketitle
+\section*{3}
+\subsection*{b}
+\paragraph{Induktions Anfang\\}
+ist $n = 1$, so gilt $n^2 = 1 \equiv 1 \mod 5$\\
+ist $n = 2$, so gilt $n^2 = 4 \equiv -1 \mod 5$\\
+ist $n = 3$, so gilt $n^2 = 9 \equiv -1 \mod 5$\\
+ist $n = 4$, so gilt $n^2 = 16 \equiv 1 \mod 5$\\
+ist $n = 5$, so gilt $n^2 = 25 \equiv 0 \mod 5$
+\paragraph{Induktions Schritt\\}
+$(n+5)^2=n^2+10n+25\equiv n^2 \mod 5 \equiv \{-1,0,1\}\mod 5$\\
+Da $\equiv$ nach 4.5 transitiv ist.
+\subsection*{b}
+\subsubsection*{$2^{2024}$}
+\begin{align*}
+    2^4 = 16 &\equiv 3 \mod 13\\
+    2^{2024}\mod 13&=(2^4)^{506}\mod 13\\
+    &=\overline{3}^{506}\\
+    &=\overline{(3\cdot 3\cdot 3)^{168}\cdot 3\cdot 3}\\
+    &=\overline{1^{168}\cdot 3\cdot 3}\\
+    &=1=r_1
+\end{align*}
+\subsubsection*{$3^{2024}$}
+\begin{align*}
+    3^{2024}\mod 13&=\overline{3^{2024}}\\
+    &=\overline{(3\cdot 3\cdot 3)^{674}\cdot 3\cdot 3}\\
+    &=\overline{1^{674}\cdot 3\cdot 3}\\
+    &=9=r_2
+\end{align*}
+\subsubsection*{$5^{2021}$}
+\begin{align*}
+    5^{2021}\mod 13 &=(5^{2020}\cdot 5)\mod 13\\
+    &=\overline{-1^{1010}}\cdot 5\\
+    &=1\cdot 5=5=r_3
+\end{align*}
+\subsubsection*{$7^{2024}$}
+\begin{align*}
+    7^3=343&\equiv 5(\mod 13)\\
+    7^{2024}\mod 13&=(7^{2021}\cdot 49)\mod 13\\
+    &=\overline{5^{674}}\cdot 49\\
+    &=\overline{-1^{337}}\cdot 49\\
+    &=\overline{-1}\cdot 49\\
+    &=3=r_4
+\end{align*}
+\subsection*{c}
+Sei $p$ eine ungerade Zahl, so ist
+\begin{align*}
+    p\equiv 1(\mod 2)\\
+    \Rightarrow p^2\equiv 1(\mod 2)\\
+    \Rightarrow 8p^2\equiv 1(\mod 2)\\
+    \Rightarrow 8p^2+1\equiv 0(\mod 2)
+\end{align*}
+Also gilt $2|(8p^2+1)$, wenn $p$ ungerade ist, also ist
+$(8p^2+1)$ auch keine Primzahl.
+
+$8\cdot 2^2+1 = 33$ ist eine Primzahl und da 2
+die einzige gerade Primzahl ist, gilt $(8p^2+1)$
+nur für 2.$\blacksquare$
+\end{document}

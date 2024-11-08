@@ -1,0 +1,92 @@
+\documentclass{article}
+\title{PSE Übung 3}
+\author{Marvin Hepp (3759031)\& Nick Daiber (3728224)}
+\begin{document}
+    \maketitle
+    \section*{1}
+    \subsection*{a}
+    Wenn wir im Hamster UI einen neuen Hamster erstellen werden einige Schritte ausgeführt. Zuerst
+    wird im Heap-Speicher ein neues Objekt der Klasse Hamster allokiert, das heißt, es wird Speicher für
+    ein neues Objekt vom Typ Hamster reserviert. Anschließend werden die Attribute des neuen Hamster-
+    Objekts wie location, direction und territory auf die gewünschten Startwerte gesetzt und es wird eine
+    Referenz auf das neu erzeugte Objekt angelegt, sodass das Objekt in weiteren Methoden verwendet
+    werden kann. Abschließend wird der neue Hamster in der Benutzeroberfläche angezeigt.
+    \subsection*{b}
+    Bei der Operation getDefaultHamster() handelt es sich um eine Abfrage. Dies liegt daran, dass die
+    Operation ausschließlich den Standardhamster zurückgibt und dabei kein Objekt erzeugt und auch von
+    keinem Objekt der Zustand verändert wird.
+    \subsection*{c}
+    Wenn man die Operation getDefaultHamster() auf dem territory aufruft, dann wird kein neues Objekt
+    erstellt, sondern es wird einem lediglich die Referenz zu dem aktuellen Standarthamster
+    zurückgegeben, welcher sich bereits fertig initialisiert im Speicher befindet.
+
+    \newpage
+    \section*{3}
+    \subsection*{a}
+    \paragraph{Abfragen}
+    \begin{enumerate}
+        \item {Möglichkeit alle Termine an einem bestimmten Datum abzufragen\\
+        Parameter: Datum\\
+        Rückgabe: Vector an Terminen}
+        \item {Möglichkeit alle Termine mit \verb|x| im Namen abzufragen\\
+        Parameter: \verb|x|\\
+        Rückgabe: Vector an Terminen}
+        \item {Möglichkeit aktuelles Datum abzufragen\\
+        Parameter: Keine\\
+        Rückgabe: Datum (wahrscheinlich eigene Klasse)}
+    \end{enumerate}
+    \paragraph{Kommandos}
+    \begin{enumerate}
+        \item {Möglichkeit einen Termine an einem bestimmten Datum zu setzen\\
+        Parameter: Datum, Termin\\
+        Rückgabe: succes / failure}
+        \item {Möglichkeit einen wiederkehrenden Termin zu setzen (bspw. alle 14 Tage)\\
+        Parameter: Termin, Erstes Datum, Zeitspanne\\
+        Rückgabe: succes / failure}
+        \item {Möglichkeit einen bestimmten Termin zu Löschen\\
+        Parameter: Termin\\
+        Rückgabe: succes / failure}
+    \end{enumerate}
+    \newpage
+    \subsection*{b}
+    \begin{verbatim}
+        /*
+        * This method returns all appointments on a given date
+        *
+        * @param date - date in question
+        * @returns all appointments
+        *
+        * @requires date be an actual date
+        * @ensures all appointments on date returned
+        */
+    \end{verbatim}
+    \begin{verbatim}
+        /*
+        * This method returns the current date
+        *
+        * @returns current date
+        *
+        * @ensures the returned date is valid
+        */
+    \end{verbatim}
+    \begin{verbatim}
+        /*
+        * This method creates an appointment on a date
+        *
+        * @param date
+        * @param appointment
+        *
+        * @requires valid date, valid appointment
+        * @ensures the appointment is created
+        */
+    \end{verbatim}
+    \begin{verbatim}
+        /*
+        * This method deletes a date
+        *
+        * @requires appointment still active
+        * @ensures the appointment is deleted
+        */
+    \end{verbatim}
+
+\end{document}
