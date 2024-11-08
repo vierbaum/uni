@@ -70,14 +70,14 @@ Informationsgehalt $I\approx 2.06$ ab.
 \section{}
 \subsection{}
 \begin{tabular}{c|c|c|c|c|c|c|c}
-    a&b&c&$\neg a \lor b$&$(\neg a \lor b) \land \neg c)$&$(a\lor c)$&$b \land (a \lor c)$&$f(a,b,c)$\\
+    c&b&a&$\neg a \lor b$&$(\neg a \lor b) \land \neg c)$&$(a\lor c)$&$b \land (a \lor c)$&$f(a,b,c)$\\
     0&0&0&1&1&0&0&1\\
-    0&0&1&1&0&1&0&0\\
+    0&0&1&0&0&1&0&0\\
     0&1&0&1&1&0&0&1\\
     0&1&1&1&0&1&1&1\\
-    1&0&0&0&0&1&0&0\\
+    1&0&0&1&1&0&0&1\\
     1&0&1&0&0&1&0&0\\
-    1&1&0&1&1&1&1&1\\
+    1&1&0&1&0&1&0&0\\
     1&1&1&1&0&1&1&1\\
 \end{tabular}
 \subsection{}
@@ -138,12 +138,12 @@ $y = \prod M(1,4,5)$
     &&x_2\ar[dl]_0\ar[drr]_1&&&&&&&&x_2\ar[dll]_0\ar[dr]_1\\
     &x_3\ar[dl]_0\ar[dr]_1&&&x_3\ar[dl]_0\ar[dr]_1&&&&x_3\ar[dl]_0\ar[dr]_1&&&x_3\ar[dl]_0\ar[dr]_1\\
     0&&0&0&&0
-    &&0&&1&1&&1
+    &&0&&1&0&&1
 }
 \subsection{}
 \xymatrix{
-    x_1\ar[dr]_1\ar[dd]_0\\
-    &x_2\ar[d]_0\ar[dr]_1\\
-    0&x_3\ar[l]_0\ar[r]_1&1
+    x_1\ar[dr]_1\ar[d]_0\\
+    0&x_3\ar[l]_0\ar[dl]_1\\
+    1
 }
 \end{document}
