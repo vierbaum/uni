@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.11.5)  7 NOV 2024 13:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.11.5)  10 NOV 2024 18:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -130,84 +130,121 @@ Xy-pic pdf driver: `curve' extension support
  loaded)
 (/usr/share/texmf-dist/tex/generic/xypic/xyarrow.tex
  Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded) loaded))
+(/usr/share/texmf-dist/tex/latex/listings/listings.sty
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks24
+)
+\lst@mode=\count272
+\lst@gtempboxa=\box55
+\lst@token=\toks25
+\lst@length=\count273
+\lst@currlwidth=\dimen174
+\lst@column=\count274
+\lst@pos=\count275
+\lst@lostspace=\dimen175
+\lst@width=\dimen176
+\lst@newlines=\count276
+\lst@lineno=\count277
+\lst@maxwidth=\dimen177
+
+(/usr/share/texmf-dist/tex/latex/listings/lstpatch.sty
+File: lstpatch.sty 2024/02/21 1.10 (Carsten Heinz)
+)
+(/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2024/02/21 1.10 (Carsten Heinz)
+\c@lstnumber=\count278
+\lst@skipnumbers=\count279
+\lst@framebox=\box56
+)
+(/usr/share/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2024/02/21 1.10 listings configuration
+))
+Package: listings 2024/02/21 1.10 (Carsten Heinz)
+
 (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count272
-\l__pdf_internal_box=\box55
+\l__color_backend_stack_int=\count280
+\l__pdf_internal_box=\box57
 ) (./02.aux)
 \openout1 = `02.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 3.
+(Font)              <7> on input line 7.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 3.
-Package xypdf Info: Line width: 0.39998pt on input line 3.
-
-Overfull \hbox (17.24684pt too wide) in paragraph at lines 42--42
-[]                    \OT1/cmtt/m/n/10 res bekannt und zu beginnt allokiert wer
-den kann.[] 
- []
-
-
-Overfull \hbox (1.49698pt too wide) in paragraph at lines 42--42
-[]                    \OT1/cmtt/m/n/10 bei dem remove an stelle 0 in O(1) m^^?o
-glich ist[] 
- []
+(Font)              <5> on input line 7.
+Package xypdf Info: Line width: 0.39998pt on input line 7.
+\c@lstlisting=\count281
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 8.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 8.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 8.
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (48.74657pt too wide) in paragraph at lines 66--66
-[]        \OT1/cmtt/m/n/10 hier als kurzschreibweise f^^?ur eine funktion mit 2
- bis k parametern.[] 
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 4
+4.
+
+(/usr/share/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 44.
+
+Overfull \hbox (3.00354pt too wide) in paragraph at lines 50--51
+[][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (11.99689pt too wide) in paragraph at lines 66--66
-[]                \OT1/cmtt/m/n/10 Nach der Rekursion geschieht ausgabe als ein
-e Liste.[] 
+Overfull \hbox (39.0039pt too wide) in paragraph at lines 51--53
+[][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-<xymatrix 9x3 498> [2] (./02.aux)
+[2{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] <xymatrix
+9x3 498> [3] (./02.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3162 strings out of 474916
- 39312 string characters out of 5772099
- 1946187 words of memory out of 5000000
- 25481 multiletter control sequences out of 15000+600000
- 560320 words of font info for 46 fonts, out of 8000000 for 9000
+ 4885 strings out of 474916
+ 62630 string characters out of 5772099
+ 1940187 words of memory out of 5000000
+ 27175 multiletter control sequences out of 15000+600000
+ 563392 words of font info for 56 fonts, out of 8000000 for 9000
  725 hyphenation exceptions out of 8191
- 62i,14n,68p,1439b,465s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 62i,14n,68p,1444b,1260s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
-hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dis
-t/fonts/type1/public/xypic/xyatip10.pfb></usr/share/texmf-dist/fonts/type1/publ
-ic/xypic/xybtip10.pfb>
-Output written on 02.pdf (2 pages, 88385 bytes).
+ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/sh
+are/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/p
+ublic/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/xypic/xya
+tip10.pfb></usr/share/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb>
+Output written on 02.pdf (3 pages, 114121 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
- 33 compressed objects within 1 object stream
+ 70 PDF objects out of 1000 (max. 8388607)
+ 42 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

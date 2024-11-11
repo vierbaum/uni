@@ -1,76 +1,70 @@
 \documentclass{article}
 \usepackage{xypic}
+\usepackage{listings}
+\title{Theo III - Blatt 2}
+\author{Benjamin Möller \& Nick Daiber}
+
 \begin{document}
+\maketitle
 \section{}
 \subsection*{a}
 \begin{verbatim}
     func merge(l1, l2) {
         list res
-        while (|l1| > 0 and |l2| > 0) {
-            // Größtes Element in res[n+m]
-            if (l1[0] > l2[0]) {
-                /*
-                    append geht in O(1), da die Größe von
-                    res bekannt und zu beginnt allokiert werden kann.
-                    In tatsächlichem Code muss der aktuelle Index
-                    von res natürlich gespeichert werden.
-                /*
-                append(res, l1[0])
-                /* 
-                    annahme eines Datentypen, 
-                    bei dem remove an stelle 0 in O(1) möglich ist
-                    falls dies nicht möglich ist
-                    müssen die Listen von hinten populiert werden
-                    und l1[n] entfernt werden.
-                */ 
-                remove(l1, 0)
+        n = len(l1)
+        m = len(l2)
+        index1 = 0
+        index 2 = 0
+        while (index 1 < n and index2 < m) {
+            // Größtes Element in res
+            if (l1[index1] <= l2[index2]) {
+                res[index1 + index2] = l1[index1]
+                index1++
             }
             else {
-                append(res, l2[0])
-                remove(l2, 0)
+                res[index1 + index2] = l2[index2]
+                index2++
             }
         }
-        // falls l1 leer ist, wird l2 komplett an res angehängt
-        if (|l1| = 0) {
-            append(res, l2)
+        // verbleibende Elemente anhängen
+        if (index1 == n) {
+            append(res, l2[index2+])
         }
         else {
-            append(res, l1)
+            append(res, l1[index1+])
         }
         return res
     }
 \end{verbatim}
+
+Dabei gilt die Anzahl an Vergleichen $V \leq |l1| + |l2| = m+n \Rightarrow V\in O(n+m)$
 \newpage
 \subsection*{b}
-\begin{verbatim}
-    /* 
-        hier als kurzschreibweise für eine funktion mit 2 bis k parametern.
-        Dabei wird angenommen, dass k eine zweierpotenz ist
-    */
-    func mergeK(l1, ..., lk) {
-        if (k = 2) {
-            // also nur 2 listen übergeben
-            return merge(l1, l2) // merge aus Aufgabenteil a
+\begin{lstlisting}[mathescape=true]
+    func mergeLists(Number[][] lists, left, right) {
+        if (left == right) {
+            return lists[left]
         }
-        else {
-            /*
-                Es werden jeweils k/2 listen zusammengesetzt.
-                Nach der Rekursion geschieht ausgabe als eine Liste.
-            */
-            return merge(
-                mergeK(l1, ..., l(k/2)),
-                mergeK(l(k/2+1), ..., lk)
-            )
-        }
+        mid = $\lfloor$ left + (right - left) / 2 $\rfloor$
+
+        Number[] leftMerged = mergeLists(lists, left, mid)
+        Number[] rightMerged = mergeLists(lists, mid + 1, right)
+
+        return merge(leftMerged, rightMerged)
     }
-\end{verbatim}
+\end{lstlisting}
 \subsection*{c}
-Die delete-Routine entfernt das kleinste Element im Heap.
-Dabei wird das Minimum der untersten Ebene des Heaps 
-(als Baumdarstellung) ermittelt und dieses entfernt.
-Im Speicher sind dies die letzten $\frac{n}{2}$ Speicherzellen.
+\begin{itemize}
+    \item {Die delete-Routine entfernt ein gegebenes Element aus dem Baum,
+    indem sie das Element in $O(n)$ Operationen findet, löscht und das letzte Element des Baumes
+    an dessen Stelle schreibt und dann wieder für die Heapeigenschaft sorgt.}
+    \item {Die change-key-Routine ändert den Wert für ein gegebenes Element aus dem Baum,
+    indem das Element gefunden wird, dessen Wert überschrieben wird und zuletzt die 
+    Heapeigenschaft wieder hergestellt wird.}
+\end{itemize}
+\newpage
 \subsection*{d}
-Für einen ternären Heap gilt $v$ Vaterknoten mit Söhnen $s_0,s_1,s_2$.\\
+Für einen ternären Heap gilt $v$ Elternknoten mit kindern $s_0,s_1,s_2$.\\
 $s_0 = 3\cdot v + 1, s_1 = 3\cdot v+2, s_3=3\cdot v+3$
 \begin{figure}[h!]
     \xymatrix{
