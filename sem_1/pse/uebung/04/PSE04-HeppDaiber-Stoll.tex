@@ -1,0 +1,33 @@
+\documentclass{article}
+\title{PSE Blatt 04 - Gruppe 32}
+\author{Marvin Hepp (3759031)\& Nick Daiber (3728224)}
+\begin{document}
+\section*{2}
+\subsection*{a}
+Die operation \verb|substring| kopiert die Buchstaben von 
+(inklusive) \verb|startIndex| bis (exklusive) 
+\verb|endIndex| in einen String.  Dabei muss 
+\verb|startIndex|$\geq 0$ und
+\verb|endIndex|$\leq |$\verb|string|$|$
+
+Durch Zeile 3 wird nichts direkt ausgegeben, aber 
+\verb|result| mit wert \verb|Ronnie| initialisiert.
+\subsection*{b}
+Die Operation \verb|contains(s)| prüft, ob s ein substring
+eines anderen Strings ist. Dabei muss \verb|s| eine
+\verb|CharSequence| sein.
+
+Zeile 4 gilt \verb|false| aus, da \verb|ROnnie| mit einem 
+großen \verb|O| geschrieben ist.
+\subsection*{c}
+\begin{enumerate}
+    \item \verb|statement.IndexOf("i")|
+    \item {\verb|statement.charAt(7)|\\
+    Hierbei wird angenommen, dass das erste \verb|P| der
+    "nullte" Buchstabe ist, sonst
+    \verb|statement.chatAt(8)|}
+\end{enumerate}
+\subsection*{c}
+Da \verb|String| \verb|CharSequence| implementiert.
+
+\end{document}
