@@ -6,7 +6,7 @@
 
 \begin{document}
 \maketitle
-\section{}
+\section*{1}
 \subsection*{a}
 \begin{verbatim}
     func merge(l1, l2) {
@@ -74,4 +74,19 @@ $s_0 = 3\cdot v + 1, s_1 = 3\cdot v+2, s_3=3\cdot v+3$
     }
     \caption{Darstellung ternärer Heap als Baum mit Index}
 \end{figure}
+\section*{2}
+\subsection*{a} 
+Größtes Element wird nach oben durchgereicht.\\
+Induktion über $n$ für $n=1$ trivial
+für $n=n+1$ ist die liste für $j=n$ sortiert
+$n+1$ wird "durchgereicht"
+\subsection*{b}
+\subsubsection*{best case}
+$A$ bereits sortiert, nur $j=1$ bis $n-1\Rightarrow n-1$ vergleiche
+\subsubsection*{worst case}
+$A$ "absteigend sortiert für $j=1$ bis $n-1$ jeweils
+$j-1$ vergleiche, also $\frac{(n-1)(j-1)}{2}$ vergleiche
+
+\section*{3}
+
 \end{document}

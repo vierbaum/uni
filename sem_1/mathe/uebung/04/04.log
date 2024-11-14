@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.11.5)  8 NOV 2024 15:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.11.11)  14 NOV 2024 17:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -142,7 +142,7 @@ L3 programming layer <2024-02-20>
  ) 
 Here is how much of TeX's memory you used:
  1706 strings out of 474916
- 23526 string characters out of 5772099
+ 23526 string characters out of 5772098
  1936187 words of memory out of 5000000
  24030 multiletter control sequences out of 15000+600000
  565932 words of font info for 67 fonts, out of 8000000 for 9000
@@ -156,7 +156,7 @@ mr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
 share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/p
 ublic/amsfonts/symbols/msam10.pfb>
-Output written on 04.pdf (2 pages, 98209 bytes).
+Output written on 04.pdf (2 pages, 98171 bytes).
 PDF statistics:
  56 PDF objects out of 1000 (max. 8388607)
  33 compressed objects within 1 object stream
