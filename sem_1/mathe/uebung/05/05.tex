@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\author{Nick Daiber}
+\title{Mathe 05}
+
+\begin{document}
+\maketitle
+\section*{1}
+\subsection*{a}
+\begin{tabular}{c|l}
+    \textbf{$n$}&\textbf{$g(n)$}\\
+    \hline
+    0&1\\
+    1&-4\\
+    2&$g(1+1)=-3g(1)+4g(1-1)=12+4=16$\\
+    3&$g(2+1)=-3g(2)+4g(2-1)=-48-16=-64$\\
+    4&$g(3+1)=-3g(3)+4g(3-1)=192+64=256$\\
+    5&$g(4+1)=-3g(4)+4g(4-1)=-768-256=-1024$\\
+    6&$g(6+1)=-3g(6)+4g(6-1)=3072+1024=4096$
+\end{tabular}
+\subsection*{b}
+$g(1) = -4 = (-4)^1$\\
+Es gilt also $g(n) = (-4)^n$ und $g(n) = -4g(n-1)$ für ein $n\in\mathbb N$
+
+\begin{align*}
+    g(n+1)&=-3g(n)+4g(n-1)\\
+    &=-3[g(n-1)+4g(n-2)]+4g(n-1)\\
+    &=9g(n-1)-12g(n-2)+4g(n-1)\\
+    &=13g(n-1)-12g(n-2)\\
+    &=12g(n-1)-16g(n-2)\\
+    &=-4[-3g(n-1)+4g(n-2)]\\
+    &=-4\cdot(-4)^n = (-4)^{n+1}\\
+\end{align*}
+Somit gilt $g(n) = (-4)^n$ für alle $n\in\mathbb N$
+\newpage
+
+\subsection*{c}
+Sei $ \phi = \frac{1+\sqrt{5}}{2},
+\varphi = \frac{1-\sqrt{5}}{2}$.
+Da $f_0=0=\frac{1}{\sqrt{5}}[\phi^0-\varphi^0]$
+gilt $f_n = \frac{1}{\sqrt{5}}[\phi^n-\varphi^n]$
+für ein $n\in\mathbb N_0$
+
+\begin{align*}
+    f_{n+1}&=f_n+f_{n-1}\\
+    &= \frac{1}{\sqrt{5}}(\phi^n-\varphi^n)+
+    \frac{1}{\sqrt{5}}(\phi^{n-1}-\varphi^{n-1})\\
+    &= \frac{1}{\sqrt{5}}[\phi^n-\varphi^n+
+    \phi^{n-1}-\varphi^{n-1}]\\
+    &= \frac{1}{\sqrt{5}}[\phi^n+\phi^{n-1}-
+    \varphi^n-\varphi^{n-1}]\\
+    &= \frac{1}{\sqrt{5}}
+    [(\phi+1)\phi^{n-1}-(\varphi+1)\varphi^{n-1}]\\
+    &= \frac{1}{\sqrt{5}}
+    [(\frac{1+\sqrt{5}}{2}+1)\phi^{n-1}-(\frac{1-\sqrt{5}}{2}+1)\varphi^{n-1}]\\
+    &= \frac{1}{\sqrt{5}}
+    [(\frac{3+\sqrt{5}}{2})\phi^{n-1}-(\frac{3-\sqrt{5}}{2})\varphi^{n-1}]\\
+    &= \frac{1}{\sqrt{5}}
+    [((\frac{1+\sqrt{5}}{2})^2)\phi^{n-1}-((\frac{1-\sqrt{5}}{2})^2)\varphi^{n-1}]\\
+    &= \frac{1}{\sqrt{5}}
+    [(\phi^2)\phi^{n-1}-(\varphi^2)\varphi^{n-1}]\\
+    &= \frac{1}{\sqrt{5}}
+    [\phi^{n+1}-\varphi^{n+1}]\\
+\end{align*}
+Somit gilt $f_n = \frac{1}{\sqrt{5}}[\phi^n-\varphi^n]$ für alle $n\in\mathbb N_0\blacksquare$
+\end{document}

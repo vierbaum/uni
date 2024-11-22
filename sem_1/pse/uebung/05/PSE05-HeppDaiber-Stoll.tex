@@ -1,0 +1,72 @@
+\documentclass{article}
+\usepackage{listings}
+\title{PSE Blatt 04 - Gruppe 32}
+\author{Marvin Hepp (3759031)\& Nick Daiber (3728224)}
+\begin{document}
+\maketitle
+
+\section*{1}
+\subsection*{a}
+V ist wahr, wenn Paule den Sonnenaufgang beobachten kann impliziert,
+dass er nach Osten Blickt und nicht vor einer Wand steht
+
+W ist wahr, wenn Paule nach Osten blickt und nicht vor einer wand steht oder
+nicht den Sonnenaufgang beobachtet (Vereinfacht)
+
+W ist wahr, wenn nicht Paule nicht nach Osten blickt oder vor einer wand steht oder
+nicht den Sonnenaufgang beobachtet (unvereinfacht, aber echt nicht schön)
+\subsection*{b}
+\begin{tabular}{l|l|l|l|l|l|l}
+    $X$&$Y$&$\neg X$&$\neg Y$&$\neg X \lor Y$&$\neg(\neg X \lor Y)$&$X\land \neg Y$\\
+    \hline
+    0&0&1&1&1&0&0\\
+    0&1&1&0&1&0&0\\
+    1&0&0&1&0&1&1\\
+    1&1&0&0&1&0&0\\
+\end{tabular}
+\subsection*{c}
+\begin{lstlisting}
+(Z) || (Z && (X && (!Y)))
+\end{lstlisting}
+
+Mit Funktionen eingesetzt
+\begin{lstlisting}
+(!paule.canViewSunrise()) || 
+(paule.canViewSunrise() && 
+((paule.getDirection() == Direction.EAST) && (!paule.frontIsClear())))
+\end{lstlisting}
+
+\newpage
+\section*{2}
+\subsection*{a}
+Strikte Operatoren werten jeden Teil des Ausdrucks aus,
+Semistrikte brechen schon zuvor ab bsp 
+\begin{lstlisting}
+    (x!=0) && 2/x>1
+\end{lstlisting}
+Führt bei Strikter Auswertung zum Fehler, bei Semistrikter nicht
+
+\subsection*{b}
+\subsubsection*{i}
+\begin{itemize}
+    \item { $E_1$ kann immer Ausgewertet werden, da sowohl 
+    \verb|ham| als auch \verb|null| definiert sind und
+    miteinander verglichen werden können }
+    \item { $E_2$ führt zu einem Fehler, da \verb|null| keine
+    Methode \verb|grainAvailible| hat.}
+    \item { $E_3$ führt zu einem Fehler, da \verb|null| keine
+    Methode \verb|grainAvailible| hat.}
+\end{itemize}
+\subsubsection*{ii}
+\begin{itemize}
+    \item { $E_1$ kann immer Ausgewertet werden, da sowohl 
+    \verb|ham| als auch \verb|null| definiert sind und
+    miteinander verglichen werden können }
+    \item { $E_2$ führt zu einem Fehler, da \verb|null| keine
+    Methode \verb|grainAvailible| hat.}
+    \item{ $E_3$ kann Ausgewertet werden, da nach
+    \verb|ham == null (==True)| ``abgebrochen" wird}
+\end{itemize}
+\subsection*{b}
+$E_2$ 
+\end{document}

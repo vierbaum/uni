@@ -1,0 +1,145 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{xypic}
+
+\begin{document}
+\section*{1}
+\subsection*{1.1}
+\begin{equation}
+    C_{34} = c3+c4 = 10\mu F + 20 \mu F = 30 \mu F
+\end{equation}
+\begin{equation}
+    \frac{1}{C_{ab}} = 
+    \frac{1}{C_2} +
+    \frac{1}{C_{34}} +
+    \frac{1}{C_6} =
+    \frac{1}{20\mu F} +
+    \frac{1}{30\mu F} +
+    \frac{1}{60\mu F}
+    = \frac{1}{10\mu F}
+    \Leftrightarrow C_{ab} = 10\mu F
+\end{equation}
+\subsection*{1.2}
+\begin{equation}
+    U_1 = \frac{Q_1}{C_1} = \frac{5 \cdot 10^{-5}As}{40\mu F}
+    = 1.25V
+\end{equation}
+
+\begin{equation}
+    U_2 = \frac{Q_{ab}}{C_{ab}} = \frac{20 \cdot 10^{-5}As}{10\mu F}
+    = 20V
+\end{equation}
+\subsection*{1.3}
+\begin{equation}
+    C_{ges} = C_1 + C_{ab} = 50 \mu F
+\end{equation}
+\begin{equation}
+    Q_{ges} = Q_1 + Q_{ab} = 25 \cdot 10^{-5} As
+\end{equation}
+\begin{equation}
+    U_{ges} = \frac{Q_{ges}}{C_{ges}} = \frac{25\cdot 10^{-5}As}{50\mu F}=5V
+\end{equation}
+\subsection*{1.4}
+\begin{align}
+    Q_1 = C_1 \cdot U_{ges} = 40\mu F \cdot 5V = 200 \mu C
+\end{align}
+\begin{align}
+    Q_{ab} = C_{ab} \cdot U_{ges} = 10\mu F \cdot 5V = 50 \mu C
+\end{align}
+\newpage
+\section*{2}
+\subsection*{2.1}
+\paragraph{Teilsystem a}
+\begin{equation}
+    U_1 = U_{3a} = U_{5a} + U_{4a}
+\end{equation}
+\begin{equation}
+    I_1 = I_{3a} + \underbrace{I_{5a}}_{=I_{4a}}
+\end{equation}
+\paragraph{Teilsystem b}
+\begin{equation}
+    U_2 = U_{4b} = U_{5b} + U_{3b}
+\end{equation}
+\begin{equation}
+    I_2 = I_{4b} + \underbrace{I_{5b}}_{=I_{3b}}
+\end{equation}
+
+\begin{equation}
+    \frac{1}{R_{ges}} = \frac{1}{R} + \frac{1}{R+R} = \frac{3}{2}\frac{1}{R} \Leftrightarrow
+    R_{ges} = \frac{2}{3}R
+\end{equation}
+
+\begin{align*}
+    U_2 = R_{ges}\cdot I_2 = \frac{2}{3}R I_2
+\end{align*}
+\begin{align*}
+    I_1 &= \frac{U_1}{R_{ges}}\\
+    &= \frac{U_1}{\frac{2}{3}R}\\
+    &= \frac{3}{2}\cdot\frac{U_1}{R}
+\end{align*}
+\begin{align*}
+    I_1 &= I_{3a} + I_{5a}\\
+    &= I_{3a} + \frac{U_1}{2R}\\
+    \Leftrightarrow I_{3a}&= I_1 - \frac{U_1}{2R}\\
+    &= \frac{U_1}{R_{ges}} - \frac{U_1}{2R}\\
+    &= \frac{U_1}{\frac{2}{3}R} - \frac{U_1}{2R}\\
+    &= \frac{2}{3}\cdot \frac{U_1}{R} - \frac{1}{2}\cdot \frac{U_1}{R}\\
+    &= \frac{1}{6}\cdot\frac{U_1}{R}
+\end{align*}
+\begin{align*}
+    I_2 &= I_{3b} + I_{4b}\\
+    \Leftrightarrow I_{3b} &= I_2 - I_{4b}\\
+    &= I_2 - \frac{U_2}{R}\\
+    &= I_2 - \frac{\frac{2}{3}RI_2}{R}\\
+    &= \frac{1}{3}I_2\\
+\end{align*}
+\begin{align*}
+    I_3 &= I_{3a} + I_{3b}\\
+    &= \frac{1}{6}\cdot \frac{U_1}{R}+\frac{1}{3}I_2
+\end{align*}
+\begin{align*}
+    I_1 &= I_{3a}+I_{5a}\\
+    \Leftrightarrow I_{5a}&=I_1-I_{3a}\\
+    &= \frac{3}{2}\cdot\frac{U_1}{R}-\frac{1}{6}\cdot\frac{U_1}{R}\\
+    &=
+\end{align*}
+\begin{align*}
+    I_5 &= I_{5a} + I_{5b}\\
+    &= I_{5a} + I_{3b}\\
+    &=\frac{4}{3}\cdot\frac{U_1}{R} + \frac{1}{3}I_2
+\end{align*}
+\begin{align*}
+    U_5 &= R\cdot I_5\\
+    &=\frac{4}{3}\cdot U_1 + \frac{1}{3}I_2R
+\end{align*}
+
+\subsection*{2.2}
+\begin{align*}
+    U_5 &= \frac{4}{3}\cdot U_1 + \frac{1}{3}I_2R\\
+    = 2V
+\end{align*}
+\begin{align*}
+    I_5 &=\frac{4}{3}\cdot\frac{U_1}{R} + \frac{1}{3}I_2\\
+    = 2A
+\end{align*}
+\section*{3}
+\subsection*{3.1}
+\begin{align*}
+    u(t) &= U_0 (1-e^{-\frac{t}{\tau}})\\
+    0.95 U_0 &= U_0 (1-e^{-\frac{t}{\tau}})\\
+    0.95 &=1-e^{-\frac{t}{\tau}}\\
+    e^{-\frac{t}{\tau}} &= 0.05\\
+    t &\approx 2.996 \tau
+\end{align*}
+\begin{align*}
+    u(t) &= U_0 (1-e^{-\frac{t}{\tau}})\\
+    0.99 U_0 &= U_0 (1-e^{-\frac{t}{\tau}})\\
+    0.99 &=1-e^{-\frac{t}{\tau}}\\
+    e^{-\frac{t}{\tau}} &= 0.01\\
+    t &\approx 4.605 \tau
+\end{align*}
+
+
+\end{document}
