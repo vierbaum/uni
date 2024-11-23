@@ -69,4 +69,62 @@ Führt bei Strikter Auswertung zum Fehler, bei Semistrikter nicht
 \end{itemize}
 \subsection*{b}
 $E_2$ 
+\section*{3}
+\subsection*{a}
+Das Atribut \verb|name| darf nicht \verb|null| sein.\\
+Die Referenz \verb|hamster| darf nicht \verb|numm| sein.\\
+Der Wert von \verb|grainNumber| muss eine ganzzahl $\geq$ dem überziehungslimit sein.\\
+Der Wert von \verb|maximumOverdraft| muss eine ganzzahl $\leq 0$ sein.
+
+\subsection*{b}
+Wenn auf \verb|secondaryHamster| zugegriffen wird, als sei es ein \verb|Hamster|-Objekt
+kann es zu problemen kommen, besser wäre beispielsweise einen Vektor zu nutzen, besonders,
+da so mehr als nur 2 besitzer angegeben werden können.
+
+\subsection*{c}
+\paragraph{Vorbedingungen}
+\begin{itemize}
+    \item Der Hamster muss mindestens so viele Körner bei sich haben, wie er einzahlen kann.
+    \item Der Hamster muss an dem Automaten stehen
+\end{itemize}
+\paragraph{Nachbedingungen}
+\begin{itemize}
+    \item Der Kontostand muss um die eingezahlten Körner erhöht worden sein
+    \item Der Hamster darf die eingezahlten Körner nicht mehr besitzen.
+\end{itemize}
+
+\subsection*{d}
+\paragraph{Vorbedingungen}
+\begin{itemize}
+    \item Der Hamster muss am Automat stehen
+    \item Es müssen genug Körner auf dem Konto sein oder das überziehungslimit muss für das abheben genügen
+\end{itemize}
+\paragraph{Nachbedingungen}
+\begin{itemize}
+    \item Der Hamster muss die abgehobenen Körner bei sich haben
+    \item Der Kontostand muss um die Anzahl der abgehobenen Körner reduziert worden sein
+\end{itemize}
+
+\subsection*{e}
+\verb|this| ist eine Referenz auf das Objekt dem die methode angehört.
+\verb|null| ist eine Referenz auf nichts
+
+\subsection*{f}
+Zeile 9: Es wird 3 ausgegeben, da der Bezeichner \verb|firstAccount| seit Zeile 7 auf das 
+zuletzt erstelle Konto-objekt zeigt, welches mit 3 Körnern initialisiert wurde.\\
+Zeile 10: es wird 35 ausgegeben, da der Bezeichner \verb|secondAccount| auf das zuerst erstellte
+Kontoobjekt zeigt und dessen Kontostand in Zeile 8 von 5 auf 35 erhöht wurde (insofern 30 Körner aufgeladen werden konnten).\\
+Zeile 11: Es wird nochmal 3 ausgegeben, da der Bezeichner \verb|thirdAccount| seit beginn auf das
+zuletzt erstellte Objekt zeigt.
+
+\subsection*{g}
+\verb|transferGrainsTo(firstAccount, null, 20)|\\
+Es wird versucht die \verb|depositGrains| methode aufzurufen obwohl \verb|tooBankAccount|
+auf \verb|null| zeigt.
+
+\subsection*{h}
+in offensichtlichen Fällen wie den oben genannten schon. Eine Referenz auf \verb|null| kann aber
+auch erst zur laufzeit entstehen, wenn ein Objekt gelösch wurde, eine Referenz auf dieses aber
+nicht.
+
 \end{document}
