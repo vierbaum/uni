@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{xypic}
+\usepackage{listings}
+\title{Theo III - Blatt 2}
+\author{Benjamin Möller \& Nick Daiber}
+
+\begin{document}
+\maketitle
+\section*{3}
+\subsection*{1}
+\paragraph{``$\Rightarrow$"\\}
+wenn $D_i = d(i)$ gilt $d(1)=0=D_1$
+\paragraph{``$\Leftarrow$"\\}
+sei Sei $D_i = d(i)$ ein Distanzvektor mit $D_1\neq 0$,
+dann ist $d(1) \neq 0$, aber der kürzeste weg $i\Rightarrow i$ ist immer 0.
+Dies ist ein widerspruch zur Annahme
+\subsection*{2}
+
+Sei $D_i$ ein Distanzvektor, dann gilt nach Annahme
+$d(i) = \inf\{c(\pi)\}$.
+Da der Pfad $1\Rightarrow j \Rightarrow i \in\pi$
+gitl $c(1\Rightarrow j)+\gamma(j,i)\in\{c(\pi)\}\Rightarrow \inf\{c(\pi)\}\geq c(1\Rightarrow j)+\gamma(j, i)$
+
+\subsection*{3}
+\begin{align*}
+    d(j) = \inf\{c(1\Rightarrow j)\}\\
+    \text{OBDA Wähle } i\in V\text{ so, dass}\\
+    \inf\{c(1\Rightarrow j)\}=\inf\{c(1\Rightarrow i\Rightarrow j)\}\\
+    \inf\{c(1\Rightarrow i)\} +  \gamma(i, j)\\
+\end{align*}
+
+\end{document}
