@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\author{Nick Daiber}
+\title{Mathe 06}
+
+\begin{document}
+\maketitle
+\section*{3}
+\subsection*{a}
+\paragraph{$\Rightarrow$\\}
+Sei ggT$(r, m) = 1 
+\overset{\text{Euklidischer Algorithmus}}{\Rightarrow}
+\exists a,b \in R: \overline{ar} +
+\overline{bm} = 1\Rightarrow \overline{r}^{-1}=\overline{a}$
+\paragraph{$\Leftarrow$\\}
+Sei $\overline{a}^{-1}=\overline{r} \Rightarrow \overline{ar}= 1$\\
+$ar + 0m = 1\Rightarrow \text{ggT}(r,m)=1$
+\subsection*{b}
+\begin{tabular}{l|llllllllll}
+    $\cdot$&0&1&2&3&4&5&6&7&8&9\\
+    \hline
+    0&0&0&0&0&0&0&0&0&0&0\\
+    1&0& 
+    \color{teal}
+    1&2&3&4&5&6&7&8&9\\
+
+    2&0&2&4&6&8&0&2&4&6&8\\
+    3&0&3&6&9&2&5&8&
+    \color{teal}
+    1&4&7\\
+    4&0&4&8&2&6&0&4&8&2&6\\
+    5&0&5&0&5&0&5&0&5&0&5\\
+    6&0&6&2&8&4&0&6&2&8&4\\
+    7&0&7&4&
+    \color{teal}
+    1&8&5&2&9&6&3\\
+    8&0&8&6&4&2&0&8&6&4&2\\
+    9&0&9&8&7&6&5&4&3&2&
+    \color{teal}
+    1\\
+\end{tabular}\\
+\begin{tabular}{r|l}
+    $\overline{a}$&$\overline{a}^{-1}$\\
+    \hline
+    1&1\\
+    3&7\\
+    7&3\\
+    9&9
+\end{tabular}
+\end{document}
