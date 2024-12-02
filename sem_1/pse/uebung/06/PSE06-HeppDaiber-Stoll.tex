@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\title{PSE Blatt 06 - Gruppe 32}
+\author{Marvin Hepp (3759031)\& Nick Daiber (3728224)}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\F}{\mathbb{F}}
+\begin{document}
+\maketitle
+\section*{3}
+\subsection*{a}
+Wir nehmen die Menge aller Felder
+$\F \subseteq \N\times\N$
+die besuchbar, also ohne Wand.
+Dann wählen wir einen Startpunkt $s\in \F$ und einen endpunkt
+$t\in \F$.
+Als nächstes definieren wir 
+$n:\F\rightarrow\F:(c, r)\mapsto\{(c\pm 1, r)|(c,r)\in\F\}\bigcup \{c, r\pm 1|(c,r)\in\F\}$
+Dann $p:\F\times\F^k\rightarrow \F^m$ mit 
+$p(\omega, v) =\begin{cases}\omega&\omega=t\\
+    \omega\circ \min\limits_{\tau\in n(\omega)}\{\tau, p(v\circ\omega)\}&\text{sonst}
+\end{cases}\}$.
+
+$n$ ist eine Funktion, die die besuchbaren Nachbarfelder findet
+und $p$ ist ein $m$-tupel an Feldern, $\omega$ das Aktuelle Feld und
+$v$ ein $k$-tupel der bereits besuchten feldern.
+
+Nun setzten wir $s$ auf \verb|paule.getLocation()| und $t$ auf das Feld mit
+Körnern. Demnacht gilt $(s\Rightarrow t)=p(s, \{\})$
+
+\end{document}
