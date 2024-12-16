@@ -1,0 +1,42 @@
+\documentclass{article}
+\title{Theo 1 Abgabe 4}
+\author{Nick Daiber}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning}
+\newcommand{\llang}{\langle\langle}
+\newcommand{\rrang}{\rangle\rangle}
+\newcommand{\N}{\mathbb{N}}
+
+\begin{document}
+\maketitle
+\section*{1}
+Annahme: $L$ sei Kontrextfreie Sprache.
+Sei $p\in \N$ gegeben und $w = w_1 c^pw_2$ und sei $w_1 = a$ und $w_2=b$.
+dann gilt für $w=uvzxy$ mit $|vx|\geq 1, |vzx|\leq p$ 
+ist $uv^nzx^ny\in L$
+
+Da $|vzx|\leq p\Rightarrow vwx\neq c^p$ also ist entweder $v=ac^m$ oder $x=c^kb$
+demnach ist $uv^n =u[ac^m]^n$ oder $x^ny=[c^kb]^ny$ und $uv^nzx^ny\notin L$
+also ist $L$ keine Typ-2 Sprache.
+\section*{2}
+$B$ kann man nach $B\rightarrow BB\rightarrow Baaa$ und $B\rightarrow AAB\rightarrow aaaaB$ und
+$B\rightarrow BAS \rightarrow BaaABS\rightarrow BaaaaBa$
+man kann also zu jedem wort $w$ mit $B\in w$ $3, 4 \equiv 1 (\mod 3)$ oder $5 \equiv 2 (\mod 3)$ as
+hinzufügen um für große wörter $a^n$ zu erhalten, das trivial regulär ist.
+für wörter, die zu klein sind, um in $a^n$ zu fallen sind nur endlich vorhanden,
+demnach ist unter Abschluss regulärer Sprachen $L(G)$ regulär
+\section*{3}
+\subsection*{a}
+sei $L_1=\{\varepsilon\}$, dann ist $\overline{L_1}=\Sigma^n (n\geq 1)$
+\subsection*{b}
+Sei $L_1 = L_2 = \{a^nb^n\}$ so ist $L_1\cap L_2 = \{a^nb^n\}$
+\subsection*{c}
+Sei $G=(\{S, S_1, S_2\}\cup V_1 \cup V_2, \Sigma, P, S)$ mit den Produktionsregeln
+$S\rightarrow S_1|S_2$ mit $S_i$ das Startsymbol der Grammatik $G_i$ und den Restlichen
+Produktionsregeln der Grammatiken $G_1 \cup G_2$.
+Da $L(G)$ Kontrextfreie ist, gibt es keine Sprachen $L_1, L_2$ mit $L_1 \cup L_2$ nicht
+Kontextfrei
+\end{document}
