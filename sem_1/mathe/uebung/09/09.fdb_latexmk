@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1734375933.54713 "/home/nld/Documents/uni/sem_1/mathe/uebung/09/09.tex" "09.pdf" "09" 1734375933.92772 0
-  "/home/nld/Documents/uni/sem_1/mathe/uebung/09/09.tex" 1734375933.32375 1912 413c47413fe2bbb3986a0188e0b034ef ""
+["pdflatex"] 1734429715.48355 "/home/nld/Documents/uni/sem_1/mathe/uebung/09/09.tex" "09.pdf" "09" 1734429715.98204 0
+  "/home/nld/Documents/uni/sem_1/mathe/uebung/09/09.tex" 1734429715.18202 3908 ad2051a94557c2fe932be9876f5cebdb ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1727349926 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1727349926 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1727349926 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -18,6 +18,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1727349926 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1727349926 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1727349926 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1727349926 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1727349926 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1727349926 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1727349926 32716 08e384dc442464e7285e891af9f45947 ""
@@ -41,8 +42,8 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1727349926 41588 b43d3e860a4f94167ee1e725ff526a72 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1733746193.98997 5453576 7bdf95cfb24f3b274b33bb1ed455b222 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1733746116 7805258 dae75fa8cabd391a7fcf932f42d39325 ""
-  "09.aux" 1734375933.87708 32 ab05033ccbb38b00a31b200ccedf8001 "pdflatex"
-  "09.tex" 1734375933.32375 1912 413c47413fe2bbb3986a0188e0b034ef ""
+  "09.aux" 1734429715.92543 32 c81c40425fbb5e93b90fba65da0b5e61 "pdflatex"
+  "09.tex" 1734429715.18202 3908 ad2051a94557c2fe932be9876f5cebdb ""
   (generated)
   "09.aux"
   "09.log"
