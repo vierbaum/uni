@@ -1,0 +1,110 @@
+
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usetikzlibrary{calc}
+
+\begin{document}
+\section{}
+\begin{tabular}{r|cccc|l}
+    0&0&0&0&0&0\\
+    1&0&0&0&1&-\\
+    2&0&0&1&0&-\\
+    3&0&0&1&1&0\\
+    4&0&1&0&0&1\\
+    5&0&1&0&1&1\\
+    6&0&1&1&0&-\\
+    7&0&1&1&1&1\\
+    8&1&0&0&0&-\\
+    9&1&0&0&1&1\\
+    10&1&0&1&0&0\\
+    11&1&0&1&1&0\\
+    12&1&1&0&0&1\\
+    13&1&1&0&1&-\\
+    14&1&1&1&0&1\\
+    15&1&1&1&1&1\\
+\end{tabular}
+\subsection{}
+\begin{tabular}{c|c|c|c}
+    0&-&1&1\\
+    \hline
+    -&0&1&-\\
+    \hline
+    0&0&1&1\\
+    \hline
+    -&1&-&1\\
+\end{tabular}
+\subsection{}
+Primimplikanten:
+\begin{itemize}
+    \item $c$
+    \item $d\land(\neg b)$
+\end{itemize}
+Kernimplikanten:
+\begin{itemize}
+    \item $c$
+    \item $d\land(\neg b)$
+\end{itemize}
+\subsection{}
+$f=c\lor (d \land (\neg b))$
+\subsection{}
+\begin{circuitikz}
+    \ctikzset{logic ports = european}
+    \draw
+    (0,2) node[and port] (and) {}
+    (2.5,1) node[or port] (or) {}
+    (and.in 1) node[left=.2cm](d) {$b$}
+    (and.in 2) node[left = .2cm](b) {$d$}
+    (or.in 2) node[left = .2cm](c) {$c$}
+    (or.out) node[right = .2cm](f) {$f$}
+    (and.out) |- (or.in 1)
+    (or.out) |- (f)
+    (d) -| (and.in 1)
+    (b) -| (and.in 2)
+    (c) -| (or.in 2)
+    ;
+    \node at (and.bin 1)[ocirc,left] {};
+\end{circuitikz}
+
+\subsection{}
+\begin{tabular}{c|c|c|c}
+    1&-&0&0\\
+    \hline
+    -&1&0&-\\
+    \hline
+    1&1&0&0\\
+    \hline
+    -&0&-&0\\
+\end{tabular}\\
+$f=((\neg a)\land (\neg c))\lor(b\land (\neg c))$
+\subsection{}
+$f=(b\lor (\neg d)\land (\neg c))$
+\subsection{}
+\begin{tabular}{c|c|c|c}
+    1&1&0&0\\
+    \hline
+    1&1&0&0\\
+    \hline
+    1&1&0&0\\
+    \hline
+    0&0&0&0\\
+\end{tabular}
+\subsection{}
+\begin{circuitikz}
+    \ctikzset{logic ports = european}
+    \draw
+    (0,2) node[or port] (or) {}
+    (2.5,1) node[and port] (and) {}
+    (or.in 1) node[left=.2cm](d) {$b$}
+    (or.in 2) node[left = .2cm](b) {$d$}
+    (and.in 2) node[left = .2cm](c) {$c$}
+    (and.out) node[right = .2cm](f) {$f$}
+    (or.out) |- (and.in 1)
+    (and.out) |- (f)
+    (d) -| (or.in 1)
+    (b) -| (or.in 2)
+    (c) -| (and.in 2)
+    ;
+    \node at (or.bin 1)[ocirc,left] {};
+\end{circuitikz}
+\end{document}
