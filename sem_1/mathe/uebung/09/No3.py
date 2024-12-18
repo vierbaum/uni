@@ -29,10 +29,4 @@ f = np.array([
     [2,3,0]
 ])
 
-print(a)
-print(b)
-print(c)
-print(d)
-print(e)
-print(f)
 print(a @ b)
